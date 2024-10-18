@@ -13,7 +13,7 @@ describe('Fetch user check ins history (e2e)', () => {
   })
 
   it('should be able get check ins history from the user ', async () => {
-    const token = createAndAuthenticateUser(app)
+    const token = await createAndAuthenticateUser(app)
 
     const profileResponse = await request(app.server)
       .get('/me')
