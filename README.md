@@ -1,29 +1,43 @@
-## App
+# **GymPass Style App**
 
-GymPass style app.
+Uma aplicação inspirada no modelo **GymPass**, desenvolvida para facilitar a gestão de academias e o acompanhamento de check-ins pelos usuários. Este projeto oferece funcionalidades completas para usuários e administradores, garantindo uma experiência intuitiva e eficiente.
 
-## RFs
-- [x] Deve ser possível se cadastrar;
-- [x] Deve ser possível se autenticar;
-- [x] Deve ser possível obter o perfil de um usuário logado;
-- [x] Deve ser possível obter o número de check-ins do usuário autenticado;
-- [x] Deve ser possível o usuário obter seu histórico de check-ins;
-- [x] Deve ser possível o usuário buscar academias próximas (até 10km)
-- [x] Deve ser possível buscar academias pelo nome;
-- [x] Deve ser possível o usuário realizar check-in em uma academia;
-- [x] Deve ser possível validar o check-in de um usuário;
-- [x] Deve ser possível cadastrar uma academia;
+---
 
-## RNs
-- [x] Usuário não deve se cadastrar com e-mail duplicado;
-- [x] Usuário não pode fazer check-in mais de uma vez no mesmo dia;
-- [x] O usuário não pode fazer check-in, se não estiver a menos de 100 metros da academia;
-- [x] O check-in só pode ser validado depois de 20 minutos de ter sido criado;
-- [] O check-in só pode ser validado por administradores;
-- [] A academia só pode ser cadastrada por administradores;
+## **Funcionalidades (RFs)**
 
-## RNFs
-- [x] A senha do usuário precisa está criptografada;
-- [x] Os dados serão persistidos em um banco de dados PostgreSQL;
-- [x] Todas as listas de dados, precisam está paginadas com 10
-- [x] O usuário deve ser identificado através de um JWT
+### **Usuário Final**
+- ✅ Cadastro de usuário com validação de dados.  
+- ✅ Autenticação segura com JWT.  
+- ✅ Acesso ao perfil do usuário autenticado.  
+- ✅ Visualização do número total de check-ins realizados.  
+- ✅ Histórico detalhado de check-ins.  
+- ✅ Busca de academias próximas (raio de até 10km).  
+- ✅ Busca de academias pelo nome.  
+- ✅ Realização de check-in em academias.  
+
+### **Administrador**
+- ✅ Validação de check-ins realizados por usuários.  
+- ✅ Cadastro de novas academias.  
+
+---
+
+## **Regras de Negócio (RNs)**
+
+- ✅ Não é permitido cadastro de usuários com e-mails duplicados.  
+- ✅ Apenas um check-in por usuário é permitido por dia.  
+- ✅ Check-ins só são permitidos se o usuário estiver a menos de **100 metros** da academia.  
+- ✅ Validação de check-ins só pode ocorrer **20 minutos** após a criação.  
+- ✅ **Somente administradores** podem validar check-ins.  
+- ✅ **Somente administradores** podem cadastrar academias.  
+
+---
+
+## **Requisitos Não Funcionais (RNFs)**
+
+- ✅ As senhas dos usuários são armazenadas de forma criptografada.  
+- ✅ Persistência de dados utilizando **PostgreSQL**.  
+- ✅ Todas as listas de dados são paginadas, com um limite de **10 itens por página**.  
+- ✅ O usuário é autenticado e identificado através de **JWT (JSON Web Token)**.  
+
+---
